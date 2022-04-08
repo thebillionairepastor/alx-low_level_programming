@@ -12,9 +12,9 @@ int i;
   
 for (i = 0; i <= 9; ++i)
 {
-putchar('0' + i);
+putchar ('0' + i);
 }
-putchar('\n');
+putchar ('\n');
   
 return (0);
 }
