@@ -9,11 +9,11 @@
 
 int main(void)
 {
-int n = 48;
-while (n <= 57)
+int i;
+  
+for (i = 0: i <= 9; ++i)
 {
-putchar(n);
-n += 1;
+putchar('0' + i);
 }
 printf("\n");
 return (0);
