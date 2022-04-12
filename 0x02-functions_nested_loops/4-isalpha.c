@@ -1,27 +1,13 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _isalpha - Return 1 if c is a letter. lowercase or uppercase
- *
- *@c: The int to print
- * Return: Always 0.
+ * _isalpha - a function that checks for alphabetic character
+ * @c: single letter input
+ * Return: 1 if c is a letter (lower or uppercase), 0 otherwise
  */
-
 int _isalpha(int c)
-
 {
-
-if ((c > 'a' && c < 'z') || (c > 'A' && c < 'Z'))
-{
-return (1);
+	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
+		return (1);
+	else
+		return (0);
 }
-
-else
-{
-return (0);
-}
-
-}
-© 2022 GitHub, Inc.
-Terms
-Privacy
