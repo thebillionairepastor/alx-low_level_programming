@@ -1,11 +1,10 @@
 #include "main.h"
-#include "_putchar"
-
 /**
  * _isdigit -  a function that checks for c digit 
  * @c: input
- * Return: 0 if c is a digit, 0 otherwise
+ * Return: Always 0
  */
+
 int _isdigit(int c)
 {
 if (c >= 48) && (c <= 57)
