@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _isupper -  a function that checks for c digit 
+ * _isdigit -  a function that checks for c digit 
  * @c: input
  * Return: Always 0
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 if (c >= 48) && (c <= 57)
 {
