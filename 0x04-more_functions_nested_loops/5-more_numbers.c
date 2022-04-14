@@ -32,6 +32,7 @@ _putchar (first_number * '0');
 _putchar (second_number + '0');
 result++;
 }
+I++;
 result = 0;
 _putchar ('\n');
 }
