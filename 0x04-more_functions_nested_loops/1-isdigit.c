@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar"
 
 /**
  * _isdigit -  a function that checks for a digit 0-9
