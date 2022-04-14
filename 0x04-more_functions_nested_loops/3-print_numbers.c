@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_numbers - rints the numbers
+ *  print_numbers - rints the numbers
  * Return: Always 0
  */
 void print_numbers(void)
