@@ -1,20 +1,31 @@
 #include "main.h"
 
 /**
- * _strcpy - print reverse characters.
- * @dest: Array
- * @src: - Number of array
+ * _atoi - print reverse characters.
+ * @s: Array
+ *
  * Return: Always 0.
  */
-char *_strcpy(char *dest, char *src)
+int _atoi(char *s)
 {
-	int i;
+	int i = 0, sign = 1;
+	unsigned int num = 0;
 
-	for (i = 0; src[i]; i++)
+	while (s[i] != '\0')
 	{
-		dest[i] = src[i];
+		if ((s[i] < '0' || s[i] > '9') && (s[i] == '-'))
+		{
+			sign = sign * -1;
+		}
+		else if ((s[i] >= '0' && s[i] <= '9'))
+		{
+			num = num * 10 + (s[i] - '0');
+			if ((s[i + 1] < '0' || s[i + 1] > '9'))
+			{
+				break;
+			}
+		}
+		i++;
 	}
-	dest[i] = src[i];
-	return (dest);
-
+	return (num * sign);
 }
