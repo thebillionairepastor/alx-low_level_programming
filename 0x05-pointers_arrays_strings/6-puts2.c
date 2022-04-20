@@ -1,24 +1,21 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * rev_string - a function that reverses a string
- * @s: input to reverse
- * Return: string and in reverse
+ * puts2 - function should print only one character out of two
+ * starting with the first one
+ * @str: input
+ * Return: print
  */
-void rev_string(char *s)
+void puts2(char *str)
 {
-	char rev = s[0];
-	int fcounter = 0;
-	int i;
+	int i = 0;
 
-	while (s[fcounter] != '\0')
-		fcounter++;
-
-	for (i = 0; i < fcounter; i++)
+	for (; str[i] != '\0'; i++)
 	{
-		fcounter--;
-		rev = s[i];
-		s[i] = s[fcounter];
-		s[fcounter] = rev;
+		if ((i % 2) == 0)
+			_putchar(str[i]);
+		else
+			continue;
 	}
+	_putchar('\n');
 }
