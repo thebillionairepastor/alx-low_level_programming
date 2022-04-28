@@ -7,11 +7,14 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void _print_rev_recursion(char *s)
-{
-	if (*s != '\0')
-	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
-	}
+
+int -print_rev_recursion.c ()  
+{  
+    char str[40]; // declare the size of character string  
+    printf (" \n Enter a string to be reversed: ");  
+    scanf ("%s", str);  
+      
+    // use strrev() function to reverse a string  
+    printf (" \n After the reverse of a string: %s ", strrev(str));  
+    return 0;  
 }
