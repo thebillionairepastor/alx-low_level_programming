@@ -8,9 +8,9 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int -print_rev_recursion.c ()  
+void _puts_recursion(char *s)
 {  
-    char str[40]; // declare the size of character string  
+    char *s[40]; // declare the size of character string  
     printf (" \n Enter a string to be reversed: ");  
     scanf ("%s", str);  
       
