@@ -1,6 +1,6 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
 /**
  * _strdup - duplicate to new memory space location
  * @str: char
