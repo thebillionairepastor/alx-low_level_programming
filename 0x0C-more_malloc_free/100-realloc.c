@@ -1,61 +1,35 @@
-/*
- * File: 100-realloc.c
- * Auth: King David
- */
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 /**
- * _realloc - Reallocates a memory block using malloc and free.
- * @ptr: A pointer to the memory previously allocated.
- * @old_size: The size in bytes of the allocated space for ptr.
- * @new_size: The size in bytes for the new memory block.
- *
- * Return: If new_size == old_size - ptr.
- *         If new_size == 0 and ptr is not NULL - NULL.
- *         Otherwise - a pointer to the reallocated memory block.
+ * _realloc - realloc old ptr to new
+ * @ptr: old one
+ * @old_size: old size of pointer
+ * @new_size: new size of pointer
+ * Return: void *
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *mem;
-	char *ptr_copy, *filler;
-	unsigned int index;
+	unsigned int i;
+	char *babypointer;
 
-	if (new_size == old_size)
+	if (old_size == new_size)
 		return (ptr);
-
-	if (ptr == NULL)
-	{
-		mem = malloc(new_size);
-
-		if (mem == NULL)
-			return (NULL);
-
-		return (mem);
-	}
-
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-
-	ptr_copy = ptr;
-	mem = malloc(sizeof(*ptr_copy) * new_size);
-
-	if (mem == NULL)
-	{
-		free(ptr);
+	babypointer = malloc(sizeof(char) * new_size);
+	if (babypointer == NULL)
 		return (NULL);
+	if (ptr)
+	{
+		for (i = 0; i < old_size; i++)
+		{
+			babypointer[i] = *((char *)ptr + i);
+		}
 	}
-
-	filler = mem;
-
-	for (index = 0; index < old_size && index < new_size; index++)
-		filler[index] = *ptr_copy++;
-
 	free(ptr);
-	return (mem);
+	return (babypointer);
 }
