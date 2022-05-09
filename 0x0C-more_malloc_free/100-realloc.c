@@ -2,9 +2,10 @@
  * File: 100-realloc.c
  * Auth: King David
  */
-
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _realloc - Reallocates a memory block using malloc and free.
